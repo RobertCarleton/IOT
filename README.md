@@ -1,4 +1,3 @@
 # IOT
 Amogusousus
-ayyyyyyyylmao
-deez nutty nutz yummy
+ryan reynolds is hot
