@@ -71,19 +71,17 @@ void loop() {
 
 
   if(sensorValue >= 300)
-    {
-      digitalWrite(4, HIGH);
-      lcd.setCursor(0, 0);
+   {
+    lcd.setCursor(0, 0);
     lcd.print("humidity high  ");
     lcd.setRGB(255, 0, 0);
-    }
-   else
-   {
-    digitalWrite(4, LOW);
+   }
+  else
+  {
     lcd.setCursor(0, 0);
     lcd.print("humidity normal");
     lcd.setRGB(0, 255, 0);
-   }
+  }
     
   lcd.setCursor(0, 1);
     // print the number of seconds since reset:
