@@ -5,7 +5,7 @@ const int analogOutPin = 9; // Analog output pin that the LED is attached to
 double sensorValue = 0;        // value read from the pot
 double outputValue = 0;        // value output to the PWM (analog out)
 
-//LCD
+// LCD
 #include <Wire.h>
 #include "rgb_lcd.h"
 
@@ -21,12 +21,10 @@ void setup() {
   // initialize serial communications at 9600 bps:
   Serial.begin(9600);
 
-//LCD
+// LCD
   lcd.begin(16, 2);
 
     lcd.setRGB(colorR, colorG, colorB);
-
-    // Print a message to the LCD.
 }
 
 void loop() {
@@ -51,17 +49,17 @@ void loop() {
   if(sensorValue >= 300)
    {
     lcd.setCursor(0, 0);
-    lcd.print("humidity high  ");
-    lcd.setRGB(colorR, 0, 0);
+    lcd.print("humidity high  "); // spaces are needed to keep text spaced properly
+    lcd.setRGB(colorR, 0, 0); // Red
    }
   else
    {
     lcd.setCursor(0, 0);
     lcd.print("humidity normal");
-    lcd.setRGB(0, colorG, 0);
+    lcd.setRGB(0, colorG, 0); // Green
    }
     
   lcd.setCursor(0, 1);
-    // print the number of seconds since reset:
+    // Prints the value of the moisture sensor
     lcd.print(sensorValue);
 }
